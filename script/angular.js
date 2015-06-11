@@ -16,7 +16,6 @@ game
 							scope.tiles.push( scope.tiles.length );
 						} );
 					} );
-
 				}
 			}
 		}
