@@ -218,12 +218,28 @@ game
 				element.bind( "click" , 
 					function ( ) {						
 						$rootScope.$broadcast( "start-game" );
-
-						element.addClass( "hidden" );
+						element.addClass( "hidden" ); 
 					} );
 			}
 		}
 	] );
+
+game
+	.directive( "reload" , [
+		"$window",
+		function directive ( $window ) {
+			return function ( scope, element ) {
+				scope.$on( "start-game", function ( ) {
+					element.addClass( "display" )
+				} )
+
+				element.bind ( "click" , 
+					function ( ) {
+						$window.location.reload();
+					} );
+			}
+		}
+	] )
 
 game
 	.directive( "score" , [
