@@ -53,6 +53,8 @@ $( function ( ) {
 	$( "#board" ).on( "newTile",
 		function ( ) {
 			var topOffset = parseInt( $( "board" ).offset( ).top );
+			data.element.css( "left", ( wOffset * data.points[1]) + "px" );
+			data.element.css( "top", (topOffset + (wOffset * data.points[0])) + "px");
 
 		} );
 
