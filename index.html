@@ -1,16 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="2048">
 	<head>
 		<title>2048 Game</title>
 		<link rel="stylesheet" type="text/css" href="library/normalize.css">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
 		<script type="text/javascript" src="library/jquery.min.js"></script>
 		<script type="text/javascript" src="library/jquery.touchSwipe.min.js"></script>
 		<script type="text/javascript" src="library/angular.min.js"></script>
 	</head>
 	<body>
 		<h1>2048</h1>
+		<div score>Score : {{ scoreValue }}</div>
 
 		<div id="board" board-game>
-			<div ng-repeat="tile in tiles" class="tiles" tile></div>
+			<div ng-repeat="tile in tiles" class="tiles" tile> {{ tileValue }} </div>
 		</div>
+		<input type="button" value="Start Game" start/>
+
+		<script type="text/javascript" src="script/slide.js"></script>
+		<script type="text/javascript" src="script/angular-app.js"></script>
 	</body>
 </html>
