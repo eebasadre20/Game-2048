@@ -239,7 +239,7 @@ game
 					} );
 			}
 		}
-	] )
+	] );
 
 game
 	.directive( "score" , [

@@ -226,6 +226,23 @@ game
 	] );
 
 game
+	.directive( "reload" , [
+		"$window",
+		function directive ( $window ) {
+			return function ( scope, element ) {
+				scope.$on( "start-game", function ( ) {
+					element.addClass( "display" )
+				} )
+
+				element.bind ( "click" , 
+					function ( ) {
+						$window.location.reload();
+					} );
+			}
+		}
+	] );
+
+game
 	.directive( "score" , [
 		"Gen2048",
 		function directive ( Gen2048 ) {
