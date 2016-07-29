@@ -1,2 +1,3 @@
-# Game-2048
-# Game-2048
+# 2048 - Game
+
+Simple version of the popular 2048 Game.
